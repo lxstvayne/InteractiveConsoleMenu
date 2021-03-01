@@ -42,7 +42,7 @@ private:
     static void print_other(const std::function<void()>& f) {
         system("cls");
         f();
-        std::cout << "Нажмите любую клавишу, чтобы вернуться" << std::endl;
+        std::cout << std::endl << "Нажмите любую клавишу, чтобы вернуться" << std::endl;
         _getch();
     }
 
