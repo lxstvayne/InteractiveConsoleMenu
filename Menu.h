@@ -69,7 +69,7 @@ public:
     }
 
 
-    static void set_opts(char bg_color = '0', char text_color = '7') {
+    static void set_colors(char bg_color = '0', char text_color = '7') {
         /*
             Blue 1
             LightGreen "A"
