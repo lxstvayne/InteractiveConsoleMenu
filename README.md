@@ -65,7 +65,7 @@ void print_smth()
 ```
 ___
 ## Создание меню
-Чтобы создать меню необходимо создать объект класса Menu 
+Чтобы создать меню необходимо создать объект класса **Menu** 
 ```cpp
 Menu menu(string title); // title -> Заголовок вашего меню, по умолчанию нет.
 ```
@@ -93,7 +93,7 @@ menu.run();
 ```cpp
     menu.set_colors(char BG_COLOR, char FONT_COLOR);
 ```
-Параметры BG_COLOR и FONT_COLOR применят в качестве аргумента символ. Доступные цвета:
+Параметры **BG_COLOR** и **FONT_COLOR** используют в качестве аргумента символ. Доступные цвета:
 + Blue 1
 + LightGreen "A"
 + LightAqua "B"
