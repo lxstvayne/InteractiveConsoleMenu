@@ -36,7 +36,7 @@ private:
         for (const auto& el : this->menu)
             std::cout << el << std::endl;
 
-        std::cout << "exit" << std::endl;
+        std::cout << " Выход" << std::endl;
     }
 
     static void print_other(const std::function<void()>& f) {
