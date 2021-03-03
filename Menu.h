@@ -52,13 +52,13 @@ private:
 
 public:
 
-    explicit Menu(std::string name = "") {
-        this->name = std::move(name);
+    explicit Menu(std::string title = "") {
+        this->name = std::move(title);
     }
 
-    Menu(std::vector<std::string> v, std::vector<std::function<void()>> functions, std::string name = "") {
+    Menu(std::vector<std::string> v, std::vector<std::function<void()>> functions, std::string title = "") {
         this->menu = std::move(v);
-        this->name = std::move(name);
+        this->name = std::move(title);
         this->functions = std::move(functions);
     }
 
@@ -69,7 +69,7 @@ public:
     }
 
 
-    static void set_colors(char bg_color = '0', char text_color = '7') {
+    static void set_colors(char BG_COLOR = '0', char FONT_COLOR = '7') {
         /*
             Blue 1
             LightGreen "A"
@@ -89,8 +89,8 @@ public:
         */
 
         std::string option = "COLOR ";
-        option += bg_color;
-        option += text_color;
+        option += BG_COLOR;
+        option += FONT_COLOR;
         const char* opt = option.c_str();
         system(opt);
     }
