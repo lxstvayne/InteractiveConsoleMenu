@@ -1,4 +1,4 @@
-// Created by LXSTVAYNE, GHOUL
+// Created by LXSTVAYNE, NjRat
 
 
 #include <iostream>
