@@ -42,11 +42,12 @@ private:
         std::cout << " Выход" << std::endl;
     }
 
-    static void print_other(const std::function<void()>& f) {
+    void print_other(const std::function<void()>& f) {
         system("cls");
         f();
         std::cout << std::endl << "Нажмите любую клавишу, чтобы вернуться" << std::endl;
         _getch();
+        show();
     }
 
 
@@ -116,12 +117,15 @@ public:
         int ch = 0;
         bool exit = false;
 
+        show();
+
         while (!exit)
         {
-            show();
             gotoxy(0, activeMenuItem);
 
-            ch = _getch();
+			ch = _getch();
+
+			
             if (ch == 224)
                 ch = _getch();
 
@@ -156,7 +160,7 @@ public:
 
             if (activeMenuItem > NUM_MENU_ITEMS - 1 + start_index)
                 activeMenuItem = NUM_MENU_ITEMS - 1 + start_index;
-
+				
         }
     }
 
