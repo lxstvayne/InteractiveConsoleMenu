@@ -10,6 +10,24 @@
 #include <Windows.h>
 #include <functional>
 
+enum Colors : char {
+    BLUE = '1',
+    LIGHT_GREEN = 'A',
+    LIGHT_AQUA = 'B',
+    AQUA = '3',
+    LIGHT_RED = 'C',
+    RED = '4',
+    LIGHT_PURPLE = 'D',
+    PURPLE = '5',
+    LIGHT_YELLOW = 'E',
+    YELLOW = '6',
+    BRIGHT_WHITE = 'F',
+    WHITE = '7',
+    GRAY = '8',
+    LIGHT_BLUE = '9',
+    BLACK = '0'
+};
+
 
 class Menu
 {
@@ -70,25 +88,7 @@ public:
     }
 
 
-    static void set_colors(char BG_COLOR = '0', char FONT_COLOR = '7') {
-        /*
-            Blue 1
-            LightGreen "A"
-            LightAqua "B"
-            Aqua 3
-            LightRed "C"
-            Red 4
-            LightPurple "D"
-            Purple 5
-            LightYellow "E"
-            Yellow 6
-            BrightWhite "F"
-            White 7
-            Gray 8
-            LightBlue 9
-            Black 0
-        */
-
+    static void set_colors(char BG_COLOR = Colors::BLACK, char FONT_COLOR = Colors::BRIGHT_WHITE) {
         std::string option = "COLOR ";
         option += BG_COLOR;
         option += FONT_COLOR;
@@ -101,7 +101,6 @@ public:
 
         SetConsoleCP(1251);
         SetConsoleOutputCP(1251);
-        setlocale(0, "");
 
 
         const int NUM_MENU_ITEMS = this->menu.size() + 1; // showMenu + 1
@@ -125,7 +124,7 @@ public:
 
 			ch = _getch();
 
-			
+
             if (ch == 224)
                 ch = _getch();
 
@@ -160,7 +159,7 @@ public:
 
             if (activeMenuItem > NUM_MENU_ITEMS - 1 + start_index)
                 activeMenuItem = NUM_MENU_ITEMS - 1 + start_index;
-				
+
         }
     }
 
