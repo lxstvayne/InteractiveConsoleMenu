@@ -94,19 +94,19 @@ menu.run();
 ```cpp
     menu.set_colors(char BG_COLOR, char FONT_COLOR);
 ```
-Параметры **BG_COLOR** и **FONT_COLOR** используют в качестве аргумента символ. Доступные цвета:
-+ Blue 1
-+ LightGreen "A"
-+ LightAqua "B"
-+ Aqua 3
-+ LightRed "C"
-+ Red 4
-+ LightPurple "D"
-+ Purple 5
-+ LightYellow "E"
-+ Yellow 6
-+ BrightWhite "F"
-+ White 7
-+ Gray 8
-+ LightBlue 9
-+ Black 0
+Параметры **BG_COLOR** и **FONT_COLOR** используют в качестве аргумента перечисления Colors. Доступные цвета:
++ BLUE
++ LIGHT_GREEN
++ LIGHT_AQUA
++ AQUA
++ LIGHT_RED
++ RED
++ LIGHT_PURPLE
++ PURPLE
++ LIGHT_YELLOW
++ YELLOW
++ BRIGHT_WHITE
++ WHITE
++ GRAY
++ LIGHT_BLUE
++ BLACK
